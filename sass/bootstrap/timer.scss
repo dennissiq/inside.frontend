@@ -1,0 +1,91 @@
+@import "compass/css3";
+
+// Basic layout
+html {
+  background: #333;
+  text-align: center;
+  padding-top: 36px;
+}
+body {
+  display: inline-block;
+}
+
+.radial-timer {
+  // CONFIG
+  $size: 300px;
+  $thickness: 4px;
+  $duration: 40s;
+  $color: #66ffff;
+
+  overflow: hidden;
+  height: $size;
+  width: $size;
+  position: relative;
+
+  .radial-timer-half {
+    height: $size;
+    width: $size/2;
+    border-radius: $size/2 0 0 $size/2;
+    background: $color;
+    position: absolute;
+    &:nth-of-type(2) {
+      z-index: 99999999;
+      -webkit-transform-origin: center right;
+      -webkit-transform: rotate(180deg);
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: $thickness;
+      left: $thickness;
+      height: $size - 2*$thickness;
+      width: ($size - 2*$thickness)/2;
+      border-radius: ($size - $thickness)/2 0 0 ($size - $thickness)/2;
+      background: #333;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background: #333;
+      height: $size*2;
+      width: $size*1.5;
+      left: -$size;
+      top: -$size/2;
+      -webkit-transform-origin: center right;
+    }
+  }
+
+  &.s-animate {
+    -webkit-transform-origin: center right;
+    .radial-timer-half:nth-of-type(1):after {
+      -webkit-animation: rotateLeftMask $duration infinite linear;
+    }
+    .radial-timer-half:nth-of-type(2):after {
+      -webkit-animation: rotateRightMask $duration infinite linear;
+    }
+  }
+}
+
+.token{
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  text-align: center;
+  font-family: mono;
+  line-height: 0px;
+  color: #fff;
+  font-size: 4em;
+}
+// Animations
+
+@-webkit-keyframes rotateLeftMask {
+  0%   { -webkit-transform: rotate(0deg); }
+  50%   { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(180deg); }
+}
+@-webkit-keyframes rotateRightMask {
+  0%   { -webkit-transform: rotate(0deg); }
+  50%   { -webkit-transform: rotate(180deg); visibility: hidden; }
+  100% { -webkit-transform: rotate(180deg); visibility: hidden; }
+}
