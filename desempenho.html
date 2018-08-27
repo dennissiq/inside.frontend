@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Inside Co.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/0fecb3c89d.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.js"></script> 
+
+
+</head>
+
+<body>
+        <div class="pdd-15-lg-t pdd-15-md-t">
+          <div class="container-fluid">
+
+            <div class="col-lg-10 col-md-10 ">
+              
+              <h6 class="text-gray pull-right text-bold"> <i class="fa fa-sign-out"></i> sair</h6>
+            </div>
+          </div>
+          <div class="col-md-9 col-lg-9 col-lg-offset-1 col-md-offset-1">
+            
+            <div class="container-fluid pdd-30-lg-b pdd-30-md-b">
+     
+              <h1 class="text-primary text-bold">Desempenho</h1>
+              <div class="mat-card-kit ">
+  
+                <div class="row">
+                  <div class="col-md-12 col-lg-12">
+                    <div class="container">
+                      <h2 class="text-gray text-bold">Dashboard</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="line-gray"></div>
+                <div class="row row-card">
+          
+                  <div class=" col-md-12 col-lg-12">
+                    <div class="container-fluid">
+                      <div class="pdd-30-lg-t pdd-30-md-t ">
+                        <h2 class="text-gray text-bold">Projetos realizados:</h2>
+                      </div>
+                    </div>
+                    <div class="row row-card mat-card-kit">
+                      <div class="col-lg-offset-2 col-md-offset-2 col-md-8 col-lg-8">
+                            <canvas id="projectChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-card">
+          
+                  <div class=" col-md-6 col-lg-6">
+                    <div class="container-fluid">
+                      <div class="pdd-30-lg-t pdd-30-md-t ">
+                        <h2 class="text-gray text-bold">Tempo médio gasto em demandas:</h2>
+                      </div>
+                    </div>
+                    <div class="row row-card mat-card-kit">
+                      <div class="col-md-12 col-lg-12">
+                            <canvas id="damandChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=" col-md-6 col-lg-6">
+                    <div class="container-fluid">
+                      <div class="pdd-30-lg-t pdd-30-md-t ">
+                        <h2 class="text-gray text-bold">Tempo médio gasto em projetos:</h2>
+                      </div>
+                    </div>
+                      <div class="row row-card mat-card-kit">
+                        <div class="col-md-12 col-lg-12">
+                              <canvas id="timeProject"></canvas>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <!-- <div class="row">
+                <div class="container-fluid">
+
+                  <div class="col-md-12 col-lg-12 pdd-15-lg-t pdd-15-lg-b pdd-15-md-t pdd-15-md-b">
+                    <h2>2018</h2>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+
+
+<script>
+  var project = document.getElementById("projectChart");
+  var demand = document.getElementById("damandChart");
+  var timeProject = document.getElementById("timeProjectChart");
+
+  var myChart = new Chart(project, {
+    type: 'line',
+    data: {
+      labels: ["Janeiro", "Fevereiro  ", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+      datasets: [{
+        label: 'Projetos',
+        data: [12, 19, 3, 7, 2, 3, 8, 9, 12, 7, 5, 6],
+        backgroundColor: [
+          'rgba(3, 216, 228, 0.0)'
+        ],
+        borderColor: [
+          'rgb(3, 216, 228)'
+        ],
+        borderWidth: 3
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+
+  // var timeProjectDt = new Chart(timeProject, {
+  //     type: 'doughnut',
+  //     data: [30,20,10],
+  //         labels: [
+  //     'Janeiro',
+  //     'Fevereiro',
+  //     'Março'
+  //   ],
+  //   options: {
+  //     title: {
+  //       display: true,
+  //       text: 'Predicted world population (millions) in 2050'
+  //     }
+  //   }
+  //   });
+
+  new Chart(document.getElementById("damandChart"), {
+      type: 'doughnut',
+      
+      data: {
+        labels:["Janeiro", "Fevereiro  ", "Março", "Abril"],
+        datasets: [
+          {
+            label: "Tempo",
+            backgroundColor: ["#03D8E4", "#F84B7A", "#FFC051", "#00DF43"],
+            data: [2478, 5267, 5485,4744]
+          }
+        ]
+      },
+
+    });
+  new Chart(document.getElementById("timeProject"), {
+      type: 'doughnut',
+      
+      data: {
+        labels:["Janeiro", "Fevereiro  ", "Março", "Abril"],
+        datasets: [
+          {
+            label: "Tempo",
+            backgroundColor: ["#03D8E4", "#F84B7A", "#FFC051", "#00DF43"],
+            data: [2478, 5267, 5485,4744]
+          }
+        ]
+      },
+
+    });
+
+  
+</script>
+
+
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+
+  
+
+  <!-- Menu Toggle Script -->
+
+</body>
+</html>
