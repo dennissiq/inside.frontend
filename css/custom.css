@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "Circular Std Book";
+    src: url(../fonts/CircularStd-Book.woff);
+}
+
+@font-face {
+    font-family: "Circular Std Bold";
+    src: url(../fonts/CircularStd-Bold.woff);
+}
+
+
+body {
+	font-family: "Circular Std Book",Helvetica,Arial,sans-serif;
+}
+
+.pdd-500-lg-t{
+	padding-top:500px;
+}
+.pdd-500-md-t{
+	padding-top:500px;
+}
+.pdd-500-xlg-t{
+	padding-top:500px;
+}
+.pdd-500-lg-b{
+	padding-bottom:500px;
+}
+.pdd-500-md-b{
+	padding-bottom:500px;
+}
+.pdd-500-xlg-b{
+	padding-bottom:500px;
+}
+/*#sidebar {
+	width: 100% !important;
+	position: relative !important; 
+}
+
+.menu {
+	width: 100%;
+    background: #37373a;
+    bottom: 0;
+    margin-top: 175px;
+}
+
+.menu li{
+	padding: 15px 0px;
+	list-style: none;
+}*/
+
+.back {
+    color: #03d8e4;
+    margin-top: 10px;
+}
+
+.play {
+	color: #5b5b5f;
+}
+
+.play-task {
+	padding: 5px 15px 20px 15px;
+}
+
+.mat-card-kit-title {
+	margin-left: 10px;
+}
+
+.mat-card-kit-title span {
+	margin-left: 10px;
+}
+
+.description-task {
+    padding: 20px 0;
+    text-align: justify;
+}
+
+.comment-box {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    box-shadow: 0px 0px 5px #d4cbcb;
+    margin: 10px 0px;
+    border-radius: 4px;
+}
+
+.text-comment {
+	margin-top: 10px;
+}
+
+.time-comment {
+	color: #03d8e4;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+}
+
+.user-comment span {
+	position: absolute;
+	margin-top: 6px;
+	margin-left: 10px;	
+}
+
+.user-comment {
+	color: #f84b7a;
+}
+
+.user-comment i {
+	color: #5b5b5f;
+}
+
+.comment-box textarea {
+	resize: none;
+	margin-left: -15px;
+}
+
+.send-comment{
+	color: #5f5f5f;
+	margin-top: 10px;
+	margin-left: -15px;
+}
+
+.time-pend-task {
+	margin-top: 15px; 
+	margin-bottom: 15px; 
+	font-size: 16px;
+}
+
+.util-link {
+	color: #03d8e4;
+	font-weight: bold;
+}
+
+.upload-file-link {
+	margin-top: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+}
