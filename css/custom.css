@@ -31,6 +31,10 @@ body {
 .pdd-500-xlg-b{
 	padding-bottom:500px;
 }
+
+
+
+
 /*#sidebar {
 	width: 100% !important;
 	position: relative !important; 
@@ -133,4 +137,59 @@ body {
 	margin-top: 10px;
 	margin-bottom: 15px;
 	text-align: center;
+}
+
+
+#menu, .sub-menu {
+  display: none;
+  list-style: none;
+}
+
+/*Change toggle size by adjusting width & height*/
+.tb-menu-toggle {
+  border: 0;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+}
+
+/*Change toggle color here*/
+.tb-menu-toggle i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  -webkit-transition:all .2s;
+   -moz-transition:all .2s;
+     -o-transition:all .2s;
+        transition:all .2s;
+}
+.tb-menu-toggle i:nth-child(2) {
+  top: 40%;
+}
+.tb-menu-toggle i:nth-child(3) {
+  top: 80%;
+}
+
+/* Style the active toggle here */
+.tb-menu-toggle.tb-active-toggle i {  }
+
+/*Animation of the toggle*/
+.tb-menu-toggle.tb-animate-toggle i:first-child,
+.tb-menu-toggle.tb-animate-toggle i:nth-child(2){ 
+  top: 40%;
+  -webkit-transform:rotate(45deg);
+   -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+     -o-transform:rotate(45deg);
+        transform:rotate(45deg);
+} 
+.tb-menu-toggle.tb-animate-toggle i:nth-child(3){ 
+  top: 40%;
+  -webkit-transform:rotate(-45deg);
+   -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+     -o-transform:rotate(-45deg);
+        transform:rotate(-45deg);
 }

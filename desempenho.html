@@ -27,9 +27,10 @@
 <body>
 
   <!-- Sidebar-->
-<div id="wrapper" class="toggled">
+<div class="invisible-xs invisible-xxs">
+  <div id="wrapper" class="toggled">
   
-    <div id="sidebar-wrapper" class='invisible-xs invisible-xxs'>
+    <div id="sidebar-wrapper" >
       <ul class="sidebar-nav">
         <li class="sidebar-brand  pdd-15-md-t pdd-15-lg-t pdd-15-xlg-t pdd-30-md-b pdd-30-lg-b pdd-30-xlg-b">
           <div class="container-fluid">
@@ -60,7 +61,7 @@
         </li>
         </div>
       </ul>
-          <div class="pdd-30-lg-t">
+          <div class="pdd-50-lg-t">
             <div class="pdd-500-lg-t">
               <div class="col-md-9 col-lg-9 col-lg-offset-1">
                   <img class="img-responsive" src="./images/logo_2.png">
@@ -148,6 +149,110 @@
         </div>
 
         </div>
+  </div>
+</div>
+
+
+<div class="invisible-md invisible-lg invisible-xlg" style="overflow-x: hidden;">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xxs-offset-1 col-xs-11 col-xxs-offset-11 container-fluid">
+      <h3 id="menu-toggle">Menu</h3>
+      <ul id="menu">
+        <li><a href="demandas.html" style="color: #848484 !important;"><h4>Demandas</h4> </a>
+        </li>
+        <!-- <li><a href="#">Products</a>
+						<ul class="sub-menu">
+							<li><a href="#">HTML</a></li>
+							<li><a href="#">CSS</a></li>
+							<li><a href="#">Javascript</a>
+								<ul class="sub-menu">
+									<li><a href="#">jQuery</a></li>
+									<li><a href="#">MooTools</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li> -->
+        <li><a href="desempenho.html" style="color: #848484 !important;"> <h4>Desempenho</h4></a></li>
+        <li><a href="index.html" style="color: #848484 !important;"> <h4>Sair</h4></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+
+    <div class="row ">
+      <div class="pdd-12-xxs-t pdd-12-xs-t">
+        <div class="col-xs-12 col-xxs-12">
+
+          <div class="container-fluid pdd-30-xs-b pdd-30-xxs-b">
+
+            <div class="col-xs-12 col-xxs-12 pdd-30-xxs-b pdd-30-lg-b">
+              <h3 class="text-primary text-bold text-bold">Desempenho</h3>
+              <div class="mat-card-kit">
+                <h4 class=" text-center text-gray text-bold pdd-15-xs-t  pdd-15-xxs-t ">Projetos realizados</h4>
+                <div class="line-gray"></div>
+                <div class="container-fluid table-card pdd-30-md-t pdd-30-lg-t pdd-30-xlg-t">
+                  <div class="">
+                    <table class="table table-hover table-card">
+                      <thead>
+                        <tr>
+                          <th class="legenda text-gray">Mês</th>
+                          <th class="legenda text-gray ">Quantidade</th>
+                          <th class="legenda text-gray ">Horas</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-bold">Janeiro</td>
+                          <td class="text-bold ">25 projetos</td>
+                          <td class="text-center text-bold">380h</td> 
+                        </tr>
+                        <tr>
+                          <td class="text-bold">Fevereiro</td>
+                          <td class="text-bold">14 projetos</td>
+                          <td class="text-center text-bold">440h</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="mat-card-kit">
+                <h4 class=" text-center text-gray text-bold pdd-15-xs-t  pdd-15-xxs-t ">Tempo médio</h4>
+                <div class="line-gray"></div>
+                <div class="container-fluid table-card pdd-30-md-t pdd-30-lg-t pdd-30-xlg-t">
+                  <div class="">
+                    <table class="table table-hover table-card">
+                      <thead>
+                        <tr>
+                          <th class="legenda text-gray text-center">Por projeto</th>
+                          <th class="legenda text-gray text-center">Por damanda</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-bold text-center">25h</td>
+                          <td class="text-bold text-center">3,7h</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+         
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script>
   var project = document.getElementById("projectChart");
@@ -237,6 +342,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="js/jquery.min.js"></script>
   <script src="javascripts/bootstrap.min.js"></script>
+  <script src="js/menu-mobile.js"></script>
+
 
   
 
