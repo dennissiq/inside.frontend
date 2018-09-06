@@ -193,3 +193,33 @@ body {
      -o-transform:rotate(-45deg);
         transform:rotate(-45deg);
 }
+
+/* Style for modal */
+.modal-content {
+  background: white;
+  border-radius: 7px;
+}
+
+.modal-content .modal-title {
+  text-align: center;  
+}
+
+.modal-header {
+  padding: 12px;
+}
+
+.modal-header .close {
+    margin-top: -25px;
+}
+
+.modal-content th {
+  font-weight: lighter;
+}
+
+.modal-content td {
+  font-weight: lighter;
+}
+
+.modal-content .modal-body {
+  padding: 10px;
+}
