@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Inside Co.</title>
+
+    <!-- Bootstrap core CSS -->
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+		
+    
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- <script src="https://use.fontawesome.com/0fecb3c89d.js"></script> -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/v4-shims.css">
+    <script src="node_modules/chart.js/dist/Chart.js"></script> 
+
+
+</head>
+
+<body>
+
+  <!-- Sidebar-->
+
+  <div class="invisible-xs invisible-xxs">
+	<div id="wrapper" class="toggled">
+	
+		<div id="sidebar-wrapper" class='invisible-xs invisible-xxs'>
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand  pdd-15-md-t pdd-15-lg-t pdd-15-xlg-t pdd-30-md-b pdd-30-lg-b pdd-30-xlg-b">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-11 col-lg-11 col-lg-offset-1 col-md-offset-1 pdd-15-md-t pdd-15-lg-t">
+								<div class="col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 pdd-15-md-b pdd-15-lg-b">
+									<img src="./images/perfil.jpg" class="img-responsive img-circle" alt="">
+								</div>
+								<h4 class="text-white text-bold text-left">Fernando Pessoa</h4>
+								<!-- <h5 class="text-white text-left ">Fullstack Developer</h5> -->
+								<a href="#"><h6 class="text-white text-left"><i class='fa fa-edit'></i> Editar perfil</h6></a>
+								<!-- <a href="#"><h6 class="text-white text-left"><i class='fa fa-sign-out-alt'></i> Sair</h6></a> -->
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="pdd-10-md-t pdd-10-lg-t">
+					<h6 class="text-primary">HOME</h6>
+				</li>
+				<div class="menu">
+					<li class="pdd-30-md-t pdd-30-lg-t">
+						<a href="projetos.html" class="text-white"><i class="fas fa-tasks text-white pdd-15-lg-r" aria-hidden="true" style="display:inline"></i>
+							Projetos</a>
+					</li>
+					<li>
+						<a href="cadastroProjeto.html" class="text-white"><i class="fas fa-clipboard-check text-white pdd-15-lg-r" aria-hidden="true"
+							 style="display:inline"></i> Cadastrar novo projeto</a>
+					</li>
+					<li>
+						<a href="analistas.html" class="text-white"> <i class="fas fa-users text-white pdd-15-lg-r" aria-hidden="true" style="display:inline"></i>
+							Analistas</a>
+					</li>
+					<li>
+						<a href="desempenhoAdmin.html" class="text-white"> <i class="fas fa-chart-line text-white pdd-15-lg-r" aria-hidden="true"
+							 style="display:inline"></i> Desempenho</a>
+					</li>
+				</div>
+			</ul>
+			<div class="pdd-50-lg-t">
+				<div class="pdd-500-lg-t">
+					<div class="col-md-9 col-lg-9 col-lg-offset-1">
+						<img class="img-responsive" src="./images/logo_2.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
+	
+	
+		<div class="pdd-15-lg-t pdd-15-md-t">
+	
+			<div class="container-fluid">
+	
+				<div class="col-lg-11 col-md-11 ">
+					<h6 class="text-gray pull-right text-bold"> <a href="index.html"> <i class="fa fa-sign-out"></i> sair</a></h6>
+				</div>
+	
+			</div>
+	
+			<div class="col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1">
+	
+				<div class="container-fluid pdd-30-lg-b pdd-30-md-b">
+
+					<div class="col-md-9 col-lg-12 pdd-30-md-b pdd-30-lg-b">
+						<h1 class="text-primary text-bold text-bold">Analistas</h1>
+						
+						<div class="mat-card-kit">
+							<div class="row">
+								<div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3" >
+									<h2 class=" text-center text-gray text-bold  pdd-15-md-b">Projeto vs Analista</h2>
+							</div>
+							<div class="col-md-2 col-lg-2 col-lg-offset-1 pdd-15-lg-t pdd-15-lg-b col-md-offset-1 pdd-15-md-t pdd-15-md-b" >
+							 	<a href="#" class='text-primary pdd-15-md-b' data-toggle="modal" data-target="#editar">
+									<i class="fas fa-user-plus fa-2x text-primary" ></i>
+								</a>
+							</div>
+							</div>
+
+							  <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="editarTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title text-gray text-bold" id="editarTitle">Detalhes do Analista</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                              <div class="line-gray"></div>
+                              <div class="row">
+                              	<div class="col-md-4 col-lg-4 col-lg-offset-5 col-md-offset-5 pdd-50-md-t pdd-50-lg-t">
+                              		<i class="fas fa-user-circle fa-5x text-gray" ></i>
+                              		
+                              	</div>
+                              </div>
+                              <div class="row">
+                              	<div class="col-md-4 col-lg-4 col-lg-offset-4 col-md-offset-4 pdd-15-md-t pdd-15-lg-t">
+                              		<h4 class="text-gray text-center">Fernando Pessoa </h4>
+                              	</div>
+
+                              </div>
+                              <div class="row">
+                              	<div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3 pdd-15-md-b pdd-15-lg-b">
+                              		<h5 class="text-warning text-center">em 2 projetos, 7 demandas </h5>
+                              		<h5 class="text-warning text-center">Indisponível até 25/08/18</h5>
+                              	</div>
+
+                              </div>
+
+                            <div class="modal-body">
+                              <div class="container-fluid table-card">
+                                <div class="">
+                                  <table class="table table-hover table-card">
+                                    <thead>
+                                      <tr>
+                                        <th class="text-gray text-left">Projeto</th>
+                                        <th class="text-gray ">Demanda</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="text-left">Projeto Rio - Governo</td>
+                                        <td >Atualizar SDKs</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-left">Projeto Rio - Governo </td>
+                                        <td >Novo Design Pattern do Projeto</td>
+                                      
+                                      </tr>
+                                      <tr>
+                                        <td class="text-left">Projeto Rio - Governo</td>
+                                        <td >Atualizar SDKs</td>
+                                      </tr>
+                                       <tr>
+                                        <td class="text-left">Projeto Rio - Governo</td>
+                                        <td >Atualizar SDKs</td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-left">Projeto Rio - Governo</td>
+                                        <td >Novo Design Pattern do Projeto</td>
+                                      
+                                      </tr>
+                                      <tr>
+                                        <td class="text-left">Projeto Rio - Governo</td>
+                                        <td >Atualizar SDKs</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+							
+						
+							<div class="line-gray"></div>	
+							
+							<div class="container-fluid table-card pdd-30-md-t pdd-30-lg-t pdd-30-xlg-t">
+								<div class="">
+									<table class="table table-hover table-card">
+										<thead>
+											<tr>
+												<th class="legenda text-gray">Analista</th>
+												<th class="legenda text-gray">Especialista</th>
+												<th class="legenda text-gray">Local</th>
+												<th class="legenda text-gray">Status</th>
+												<th class="legenda text-gray"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-bold">Fernando Pessoa</td>
+												<td class="text-bold">Arquiteto de Software</td>
+												<td class="text-bold">São Paulo</td>
+												<td class="text-success text-bold"> <i class="fas fa-check-circle"></i> Disponível </td>
+												<td><a href="detalheDemandaAdmin.html"><i class="fa fa-search text-gray" aria-hidden="true"></i></a> </td>
+											</tr>
+											<tr>
+												<td class="text-bold">Machado de Assis</td>
+												<td class="text-bold">Engenheiro de Software</td>
+												<td class="text-bold">Rio de Janeiro</td>
+												<td class="text-warning text-bold"> <i class="fas fa-exclamation-circle"></i>  em 2 projetos, 25 demandas </td>
+												<td><a href="detalheDemandaAdmin.html"><i class="fa fa-search text-gray" aria-hidden="true"></i></a> </td>
+											</tr>
+											<tr>
+												<td class="text-bold"> Jorge Amando</td>
+												<td class="text-bold">Scrum Master</td>
+												<td class="text-bold">Rio de Janeiro</td>
+												<td class="text-success text-bold"> <i class="fas fa-check-circle"></i> Disponível </td>
+												<td><a href="detalheDemandaAdmin.html"><i class="fa fa-search text-gray" aria-hidden="true"></i></a> </td>
+											</tr>
+											<tr>
+												<td class="text-bold">Machado de Assis</td>
+												<td class="text-bold">Engenheiro de Software</td>
+												<td class="text-bold">Rio de Janeiro</td>
+												<td class="text-warning text-bold"> <i class="fas fa-exclamation-circle"></i>  em 2 projetos, 25 demandas </td>
+												<td><a href="detalheDemandaAdmin.html"><i class="fa fa-search text-gray" aria-hidden="true"></i></a> </td>
+											</tr>
+											<tr>
+												<td class="text-bold"> Jorge Amando</td>
+												<td class="text-bold">Scrum Master</td>
+												<td class="text-bold">Rio de Janeiro</td>
+												<td class="text-success text-bold"> <i class="fas fa-check-circle"></i> Disponível </td>
+												<td><a href="detalheDemandaAdmin.html"><i class="fa fa-search text-gray" aria-hidden="true"></i></a> </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					
+   <div class="invisible-md invisible-lg invisible-xlg" style="overflow-x: hidden;">
+		<div class="row">
+			<div class="col-xs-offset-1 col-xxs-offset-1 col-xs-11 col-xxs-offset-11 container-fluid">
+					<h3 id="menu-toggle">Menu</h3>
+					<ul id="menu">
+						<li><a href="demandas.html" style="color: #848484 !important;"><h4>Demandas</h4> </a>
+						</li>
+						<li><a href="desempenho.html" style="color: #848484 !important;"> <h4>Desempenho</h4></a></li>
+						<li><a href="index.html" style="color: #848484 !important;"> <h4>Sair</h4></a></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+
+	
+
+
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="javascripts/bootstrap.min.js"></script>
+  <script src="js/menu-mobile.js"></script>
+
+  
+
+  <!-- Menu Toggle Script -->
+
+</body>
+</html>
