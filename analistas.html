@@ -21,8 +21,13 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/v4-shims.css">
-    <script src="node_modules/chart.js/dist/Chart.js"></script> 
-
+		<script src="node_modules/chart.js/dist/Chart.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js">
+		</script>
+		<script src="node_modules/moment/locale/pt-br.js"></script>
+		<script src="js/daterangepicker.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
 
 </head>
 
@@ -86,8 +91,8 @@
 	
 		<div class="pdd-15-lg-t pdd-15-md-t">
 	
-			<div class="container-fluid">
-	
+
+			<div class="container-fluid">	
 				<div class="col-lg-11 col-md-11 ">
 					<h6 class="text-gray pull-right text-bold"> <a href="index.html"> <i class="fa fa-sign-out"></i> sair</a></h6>
 				</div>
@@ -104,10 +109,11 @@
 							<div class="row">
 								<div class="col-md-6 col-lg-6 col-lg-offset-3 col-md-offset-3" >
 									<h2 class=" text-center text-gray text-bold  pdd-15-md-b">Projeto vs Analista</h2>
+									
 							</div>
 							<div class="col-md-2 col-lg-2 col-lg-offset-1 pdd-15-lg-t pdd-15-lg-b col-md-offset-1 pdd-15-md-t pdd-15-md-b" >
-							 	<a href="cadastroAnalista.html" class='text-primary pdd-15-md-b'>
-									<i class="fas fa-user-plus fa-2x text-primary" ></i>
+							 	<a href="cadastroAnalista.html" class='text-primary pdd-15-md-b '>
+									<i class="fas fa-user-plus fa-2x text-primary text-center" ></i>
 								</a>
 							</div>
 							</div>
@@ -121,8 +127,28 @@
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
-                              <div class="line-gray"></div>
-                              <div class="row">
+															<div class="line-gray"></div>
+															
+															<div class="row">
+																<div class="col-md-4 col-lg-4 pdd-15-lg-b pdd-30-lg-t pdd-30-md-t pdd-15-md-b col-lg-offset-1 col-md-offset-1">
+																	<img src="./images/perfil.jpg" class="img-responsive img-circle" alt="">
+																</div>
+																<div class="col-md-7 col-lg-7 pdd-15-lg-b pdd-30-lg-t pdd-30-md-t pdd-15-md-b">
+																	<div class="col-md-12 col-lg-12 ">
+																		<h4 class="text-gray ">Fernando Pessoa </h4>
+																	</div>
+																	<div class="col-md-12 col-lg-12">
+																		<h5 class="text-danger">em 2 projetos, 7 demandas </h5>
+																		<h5 class="text-danger">Indisponível até 25/08/18</h5>
+																	</div>
+																	<div class="col-md-8 col-lg-8">
+																		<h5 class="text-gray">Ajustar agenda do analista</h5>
+																		<input type="text" name="daterange" class="form-control" value="" />
+																	</div>
+																</div>
+
+															</div>
+                              <!-- <div class="row">
                               	<div class="col-md-4 col-lg-4 col-lg-offset-5 col-md-offset-5 pdd-50-md-t pdd-50-lg-t">
                               		<i class="fas fa-user-circle fa-5x text-gray" ></i>
                               		
@@ -140,11 +166,13 @@
                               		<h5 class="text-warning text-center">Indisponível até 25/08/18</h5>
                               	</div>
 
-                              </div>
+															</div> -->
+															
+															<!-- <div class="line-gray"></div> -->
 
-                            <div class="modal-body">
+                            <div class="modal-body ">
                               <div class="container-fluid table-card">
-                                <div class="">
+                                <div class="pdd-15-md-t pdd-15-lg-t">
                                   <table class="table table-hover table-card">
                                     <thead>
                                       <tr>
@@ -267,9 +295,21 @@
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
-  <script src="js/jquery.min.js"></script>
-  <script src="javascripts/bootstrap.min.js"></script>
-  <script src="js/menu-mobile.js"></script>
+  <!-- <script src="js/jquery.min.js"></script> -->
+	<script src="javascripts/bootstrap.min.js"></script>
+
+	<script src="js/menu-mobile.js"></script>
+	<script>
+		$(function () {
+			$('input[name="daterange"]').daterangepicker({
+				
+				opens: 'left'
+			}, function (start, end, label) {
+				console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+			});
+		});
+	</script>
+
 
   
 
